@@ -1,0 +1,182 @@
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ebebeb;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 75px;
+    .left-placeholder, .right-placeholder{
+        flex: 1;
+        background-color: #ffffff;
+    }
+
+    .header-content{
+        width: 1070px;
+        display: flex;
+        background-color: #ffffff;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo-image{
+        padding-right:10px ;
+        padding-top: 10px;
+        img{
+            width: 180px;
+        }
+    }
+
+    .nav-menu{
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        .menu-item{
+            color: #333333;
+            flex: 1;
+            justify-content: flex-start;
+            background-color: #ffffff;
+            border-radius: 30%;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            transition: .25s ease;
+            a{
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 10px;
+                transition: .25s ease;
+            }
+            :hover{
+                background-color: #eee;
+                border-radius: 30%;
+            }
+        }
+        .menu-item-account{
+            white-space: nowrap;
+            text-align: center;
+            color: #ffffff;
+            margin-right: 30px;
+            flex: 1;
+            justify-content: flex-end;
+            border-radius: 22px;
+            border: 0;
+            background-color: #72ac51;
+            padding: .75em 1.786em;
+            transition: .25s ease;
+            a{
+                border-radius: 30%;
+                transition: .25s ease;
+            }
+            :hover{
+                background-color: #47752d;
+            }
+        }
+        .menu-item-account.active{
+            white-space: nowrap;
+            text-align: center;
+            background-color: #47752d;
+            margin-right: 30px;
+            justify-content: flex-end;
+            border-radius: 22px;
+            border: 0;
+            color: #fff;
+            padding: .75em 1.786em;
+            transition: .25s ease;
+        }
+    }
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    .left-holder, .right-holder{
+        flex-grow: 1;
+        background-color: rgba(255, 255, 255, 0);
+        width: 570px;
+    }
+    .login-box{
+        //display: flex;
+        flex-grow: 1;
+        background-color: #ffffff;
+        width: 570px;
+        .login-title{
+            margin-top: 67px;
+            margin-left: 60px;
+            color: #000000;
+            font-size: 32px;
+            font-weight: 100;
+        }
+        .form{
+            margin-left: 60px;
+            input:focus{
+                border-color: #47752d;
+                outline: none !important;
+            }
+            .email-box{
+                margin-top: 30px;
+                padding-left: 60px;
+                margin: 8px 0;
+                height: 45px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            input[type=email]{
+                width: 450px;
+            }
+            input[type=email]:invalid {
+                border-color: red;
+              }
+            .password-box{
+                margin-top: 30px;
+                padding-left: 60px;
+                margin: 8px 0;
+                height: 45px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            input[type=password]{
+                width: 450px;
+            }
+
+            .submit{
+                color: #ffffff;
+                margin-right: 30px;
+                flex: 1;
+                justify-content: center;
+                border-radius: 22px;
+                border: 0;
+                color: #fff;
+                background-color: #72ac51;
+                padding: .75em 1.786em;
+                transition: .25s ease;
+                width: 450px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
